@@ -1,6 +1,3 @@
-res://sprite_2d.tscn
+res://ship.tscn
 res://addons/gdpractice/assets/theme.tres
 res://lessons/ship.gd
-res://practices/L2.P1.bullet/bullet.gd
-res://practices/L2.P1.bullet/bullet.tscn
-res://ship.tscn
