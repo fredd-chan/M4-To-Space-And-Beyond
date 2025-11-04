@@ -1,1 +1,4 @@
 res://addons/gdpractice/assets/theme.tres
+res://lessons/space_level.tscn
+res://assets/ship/main_thruster/thruster_material.tres
+res://assets/background/space_material.tres

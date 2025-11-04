@@ -1,3 +1,29 @@
-[gd_scene format=3 uid="uid://ca7yleqes5ug7"]
+[gd_scene load_steps=5 format=3 uid="uid://ca7yleqes5ug7"]
+
+[ext_resource type="PackedScene" path="res://lessons/ship.tscn" id="1_f7pcl"]
+[ext_resource type="PackedScene" uid="uid://bklom8bhpxg4h" path="res://assets/ship/side_thruster/side_thruster.tscn" id="2_etm7e"]
+[ext_resource type="PackedScene" uid="uid://dgf54k70yiiff" path="res://assets/ship/main_thruster/main_thruster.tscn" id="3_4rc43"]
+[ext_resource type="PackedScene" uid="uid://bxfevggvxo634" path="res://assets/background/space_background.tscn" id="4_4rc43"]
 
 [node name="SpaceLevel" type="Node2D"]
+
+[node name="Sprite2D" parent="." instance=ExtResource("1_f7pcl")]
+position = Vector2(974, 554)
+
+[node name="SideThruster2" parent="Sprite2D" instance=ExtResource("2_etm7e")]
+position = Vector2(-46, 22)
+rotation = 1.2654374
+
+[node name="MainThruster" parent="Sprite2D" instance=ExtResource("3_4rc43")]
+position = Vector2(-37, 0)
+points = PackedVector2Array(0, 0, 33.333332, 0, 66.666664, 0)
+
+[node name="SideThruster" parent="Sprite2D" instance=ExtResource("2_etm7e")]
+position = Vector2(-46, -22)
+rotation = 1.8170966
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D"]
+position = Vector2(-6, -1)
+position_smoothing_enabled = true
+
+[node name="SpaceBackground" parent="." instance=ExtResource("4_4rc43")]
